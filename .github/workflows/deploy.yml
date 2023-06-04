@@ -3,7 +3,7 @@ name: Release NodeJS App
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   publish-docker-hub:
