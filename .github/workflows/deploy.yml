@@ -23,4 +23,4 @@ jobs:
         with:
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/expressAppExample:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/express-app-example:latest
