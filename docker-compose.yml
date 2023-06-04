@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  node-app:
+    image: ikramahmed398/express-app-example
+    container_name: node-app
+    labels:
+      - 'com.centurylinklabs.watchtower.enable=true'
+    ports:
+      - 8080:8080
+  watchtower:
+    image: containrrr/watchtower:1.5.3
+    container_name: watchtower
+    environment:
+      - WATCHTOWER_POLL_INTERVAL=60
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
